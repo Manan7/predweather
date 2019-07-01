@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap 3 Dynamic Tabs</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+	.bs-example{
+		margin: 20px;
+	}
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#forecast">Forecast</a></li>
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Prediction<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a data-toggle="tab" href="#dropdown1">Today's</a></li>
+                <li><a data-toggle="tab" href="#dropdown2">Coming week</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <!DOCTYPE html>
+<html>
+<head>
+<title>Font Awesome 5 Icons</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+</head>
+
+
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+</body>
+</html>
+<html>
+<title>
+Iot based Weather Monitoring System.
+</title>
+<body style= "background: url(http://chittagongit.com/images/weather-icon-gif/weather-icon-gif-24.jpg); background-size:100%;">
+
+
+<center> <b> <font size="+6"> Weather Forecasting </font></b> </center>
+<br>
+<center> <b> <font size="+4" color = "black"> Mumbai </font></b> </center>
+<br>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+  text-align: center;
+  border: 3px solid black;
+}
+</style>
+</head>
+<body>
+<div class="center">
+<h2>
+ <p id="demo"></p>
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML=d;
+</script>
+</div></h2>
+<br>
+<br>
+
+</body>
+</html>
+
+
+
+    
+
+</body>
+</html>
+
+
+        </div>
+        <div id="forecast" class="tab-pane fade">
+    
+	<head>
+	<title>Data Collection Dashboard</title>
+	</head>
+	<body>
+	<table border=2 bordercolor="#0000FF">
+	<tr><td colspan="2">
+	<h1 align="center" color="#00FFFF">Data Collection Dashboard</h1>
+	</td></tr>
+	<tr><td>
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/725600/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+	</td>
+	<td><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/725600/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+	</td></tr>
+	<tr><td>
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/725600/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+	</td>
+	<td>
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/725600/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+
+	</td></tr>
+	</table>
+
+	
+	
+	</body>
+	
+        </div>
+        <div id="dropdown1" class="tab-pane fade">
+            <h3>Today's</h3>
+            <p><b>The temperature today was </b>
+            <center>{{ today }}</center>
+            </p>
+        </div>
+        <div id="dropdown2" class="tab-pane fade">
+            <h3>Coming week</h3>
+            <p><b> The temperature in coming week will be </b>
+            <center>
+            	{% for d in coming_week %}
+            	{{ d }}
+            {% endfor %}
+        	</center>		
+        	</p>	
+        </div>
+    </div>
+</div>
+</body>
+</html>
